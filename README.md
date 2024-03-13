@@ -7,7 +7,7 @@ This page lists some personal suggestions for improving the usability of bioinfo
 ## General principles
 
 - **Accuate**. This should be the most essential aspect.
-- **Reproducible**. That means users can reproduce the same result with the same input data, the same version of the tool, and the same parameters.
+- **Reproducible**. That means users can reproduce the same result with the same input data, the same version of the tool, and the same parameters (assuming the program is [deterministic](https://en.wikipedia.org/wiki/Deterministic_algorithm)).
 - **Installable**. Some tools run perfectly on developers' computers, while users with different platforms might struggle to install them, the failure might be due to different dependencies, hard-coded paths, et.al.
 - **User-friendly**. A tool should be easy to use, with comprehensive documents and well-handled configuration/input/out.
 - **Long-time maintenance**. [Sustained software development, not number of citations or journal choice, is indicative of accurate bioinformatic software](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02625-x).
@@ -106,6 +106,7 @@ Ideal
 - **Checking file existence before performing processing**. It happens frequently when a long-time job is terminated by one unexisting input file.
     - This checking can be cancelled for cases where the users trust all input files exist. Because checking thousands of input files would take a long time.
 - **Checking if the input file/directory and output file/directory are the same one**. If they are, the input file might be overwritten.
+- **If paired-end files are accepted as input, checking that the user didn't accidentally provide the same file to both R1 and R2 arguments**. If so, inform and exit immediately.
 
 ### Output
 
