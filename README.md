@@ -20,12 +20,12 @@ Basic
       For example, some standard libraries in Python 3.10 have compatibility problems.
 - **Providing sample data**.
 
-Recommended
+Recommended to provide all ways:
 
-- Supporting Conda/Pip
-    - Automatically installing dependencies
-- Providing static-linked executable binary files for multiple operating systems/platforms. Some tools written in C++ are difficult to compile from source, and dynamic-linked binaries often fail to run in clusters with older libraries.
-- Compiling from source. Some servers might have rare CPU or operating systems, users need to compile from source.
+- **Supporting Conda/Pip**. IMO, this should be a mandatory requirement for ready-for-publication tools.
+    - Automatically installing all dependencies
+- **Providing static-linked executable binary files** for multiple operating systems/platforms. Some tools written in C++ are difficult to compile from source, and dynamic-linked binaries often fail to run in clusters with older libraries.
+- **Compiling from source**. Some servers might have rare CPUs or operating systems, users have to compile from source.
 
 ## Documentation
 
@@ -42,7 +42,7 @@ Recommended
 
 Ideal
 
-- Stories behind the development and publication.
+- **Stories behind the development and publication**. This is inspiring for students, e.g., [C. Titus Brown shares many stories behind sourmash and his other tools](http://ivory.idyll.org/blog/)
 
 ## Source code
 
@@ -56,18 +56,18 @@ Ideal
 
 ## Version control
 
-- [**Semantic Versioning**](https://semver.org/)
-- [Preserving each release with Zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content).
+- [**Semantic Versioning**](https://semver.org/). Please do follow this. Many tools just release a V1.0 and never update it again.
+- [**Preserving each release with Zenodo**](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content). This is recommended for all tools, which make sure readers can reproduce the analysis.
 
 ## Command-line tools
 
 ### Architecture
 
-- Using command-subcommand structure for toolkits with multiple commands. It is good for fast locating subcommands.
+- **Using command-subcommand structure for toolkits with multiple commands**. It is convenient for fast locating subcommands without checking the official documents.
 
 Options/flags
 
-- Using common flags. E.g., `-o, --outfile` for output.
+- **Using common flags**. E.g., `-o, --outfile` for output.
 - Using both short and long forms.
 - Using consistent flags in multiple subcommands.
 
@@ -81,7 +81,7 @@ Global options/flags
 
 Recommended
 
-- Supporting shell auto-completion
+- **Supporting shell auto-completion**. This could significantly improve the usability of toolkits.
 - Checking the latest version
 
 ### Input
@@ -89,33 +89,34 @@ Recommended
 Basic
 
 - **Supporting input file list**. Things happen a lot when users give hundreds of input files which would exceed the argument length limit of some shells.
-    - Supporting file list from stdin. This is a good feature. e.g., `ls dir | tool cmd --infile-list -`.
+    - **Supporting file list from stdin**. This is a good feature. e.g., `ls dir | tool cmd --infile-list -`.
 - **Validating ALL option values first**. No one would like to see the process fail midway, caused by an invalid option parsed and used in some middle steps.
 
 Recommended
 
 - **Supporting stdin**. This enables commands to pipe up as a workflow.
-- Optional supporting input directory, for tools needing multiple input files.
-- **Seamless support of common compression files**.
+- Optional supporting input directory, for tools requiring multiple input files.
+- **Seamless support of common compression files**. At least gzip.
 - **Checking flag/option incompatibility and showing warnings before starting the jobs**.
 
 Ideal
 
 - **Checking file existence before performing processing**. It happens frequently when a long-time job is terminated by one unexisting input file.
-    - This checking can be cancelled for cases where the users trust all input files exist.
+    - This checking can be cancelled for cases where the users trust all input files exist. Because checking thousands of input files would take a long time.
+- **Checking if the input file/directory and output file/directory are the same one**. If they are, the input file might be overwritten.
 
 ### Output
 
 Basic
 
 - **Supporting both stdout and the output file**.
-- Showing overwrite warning.
+- **Showing overwrite warning**.
 
 Recommended
   
 - **Seamless support of common compression files**.
 
-### Log
+### Logging
 
 Recommended
 
