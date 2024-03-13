@@ -10,6 +10,7 @@ This page lists some personal suggestions for improving the usability of bioinfo
 - **Reproducible**. That means users can reproduce the same result with the same input data, the same version of the tool, and the same parameters.
 - **Installable**. Some tools run perfectly on developers' computers, while users with different platforms might struggle to install them, the failure might be due to different dependencies, hard-coded paths, et.al.
 - **User-friendly**. A tool should be easy to use, with comprehensive documents and well-handled configuration/input/out.
+- **Long-time maintenance**. [Sustained software development, not number of citations or journal choice, is indicative of accurate bioinformatic software](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02625-x).
 
 ## Installation
 
