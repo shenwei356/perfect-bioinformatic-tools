@@ -6,7 +6,7 @@ This page lists some personal suggestions for improving the usability of bioinfo
 
 ## General principles
 
-- **Accuate**. This should be the most essential aspect.
+- **Accurate**. This should be the most essential aspect.
 - **Reproducible**. That means users can reproduce the same result with the same input data, the same version of the tool, and the same parameters (assuming the program is [deterministic](https://en.wikipedia.org/wiki/Deterministic_algorithm)).
 - **Installable**. Some tools run perfectly on developers' computers, while users with different platforms might struggle to install them, the failure might be due to different dependencies, hard-coded paths, et.al.
 - **User-friendly**. A tool should be easy to use, with comprehensive documents and well-handled configuration/input/out.
@@ -45,7 +45,7 @@ Recommended
 
 Ideal
 
-- **Stories behind the development and publication**. This is inspiring for students, e.g., [C. Titus Brown shares many stories behind sourmash and his other tools](http://ivory.idyll.org/blog/)
+- **Stories behind the development and publication**. This is inspiring for students, e.g., [C. Titus Brown shares many stories behind sourmash and his other tools](http://ivory.idyll.org/blog/).
 
 ## Source code
 
