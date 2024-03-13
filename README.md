@@ -33,6 +33,7 @@ Basic
 
 - **Quickstart with sample data**.
 - **Usages for all commands**.
+    - **Specifying the input requirements in detail**.
 
 Recommended
 
