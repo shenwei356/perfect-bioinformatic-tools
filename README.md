@@ -10,12 +10,17 @@ What should perfect bioinformatic tools be like?
 
 ## Installation
 
-- Providing static-linked executable binary files
-- Supporting Conda/Pip
-- Compiling from source
-- Dependency specification.
+Basic
+
+- Dependency specification
     - Specifying the lowest version AND highest version.
       For example, some standard libraries in Python 3.10 have compatibility problems.
+
+Recommended
+
+- Supporting Conda/Pip
+- Providing static-linked executable binary files for multiple operating systems/platforms
+- Compiling from source
 
 ## Documentation
 
@@ -31,7 +36,7 @@ What should perfect bioinformatic tools be like?
     - Providing detailed comments for developers/contributors to know the details
 - Version control
 - Configuration file
-    - Avoid hard-coded paths/parameters
+    - Avoiding hard-coded paths/parameters
 
 ## Version control
 
@@ -51,20 +56,47 @@ Global options
 
 ### Misc
 
+Recommended
+
 - Supporting shell auto-completion
 - Checking the latest version
 
 ### Input
 
+Basic
+
 - Supporting input file list
+- Validating option values
+
+Recommended
+
 - Optional supporting input directory
 - Seamless support of common compression files
+- Checking flag/option incompatibility
+
+Ideal
+
+- Checking files before performing processing
 
 ### Output
 
-- Overwriting warning
+Basic
+
+- Showing overwrite warning
+
+Recommended
+  
 - Seamless support of common compression files
-- Log file with details
-    - Command and its version
-    - Arguments and options
-    - Time and memory usage
+
+### Log
+
+Recommended
+
+- Optionally outputting in stderr and/or a file.
+- Progress bar for a list of files/jobs
+
+Log details
+
+- Command and its version
+- Time and memory usage
+- Flags, arguments, and options
