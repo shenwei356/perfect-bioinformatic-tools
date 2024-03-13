@@ -49,7 +49,13 @@ Recommended
 
 - Command-subcommand structure for easily locating subcommand
 
-Global options
+Options/flags
+
+- Using common flags. E.g., `-o, --outfile` for output.
+- Using consistent flags in multiple subcommands.
+- Using both short and long forms.
+
+Global options/flags
 
 - `--quiet` or `--verbose`
 - `--version`
@@ -65,23 +71,26 @@ Recommended
 
 Basic
 
-- Supporting input file list
-- Validating option values
+- Supporting input file list. Things happen a lot when users give hundreds of input files which would exceed the argument length limit of some shells.
+- Validating ALL option values. No one would like to see the process fail midway, caused by an invalid option parsed and used in some middle steps.
 
 Recommended
 
+- Supporting stdin
 - Optional supporting input directory
 - Seamless support of common compression files
-- Checking flag/option incompatibility
+- Checking flag/option incompatibility and showing warnings before starting the jobs.
 
 Ideal
 
-- Checking files before performing processing
+- Checking file existence before performing processing. It happens frequently when a long-time job is terminated by one unexisting input file.
+    - This checking can be cancelled for cases where the users trust all input files exist.
 
 ### Output
 
 Basic
 
+- Supporting both stdout and the output file.
 - Showing overwrite warning
 
 Recommended
@@ -93,7 +102,7 @@ Recommended
 Recommended
 
 - Optionally outputting in stderr and/or a file.
-- Progress bar for a list of files/jobs
+- Showing a progress bar for a large number of files/jobs and estimating time of arrival (ETA).
 
 Log details
 
