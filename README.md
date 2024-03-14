@@ -25,7 +25,7 @@ Recommended to provide all ways:
 
 - **Supporting Conda/Pip**. IMO, this should be a mandatory requirement for ready-for-publication tools.
     - Automatically installing all dependencies
-- **Providing static-linked executable binary files** for multiple operating systems/platforms. Some tools written in C++ are difficult to compile from source, and dynamic-linked binaries often fail to run in clusters with older libraries.
+- **Providing static-linked executable binary files** for multiple operating systems/platforms. Some tools written in C++ are difficult to compile from source, and dynamic-linked binaries often fail to run in clusters with older libraries, e.g., `version `GLIBC_2.29' not found` is a common error.
 - **Compiling from source**. Some servers might have rare CPUs or operating systems, users have to compile from source.
 
 ## Documentation
@@ -35,7 +35,7 @@ Basic
 - **Quickstart with sample data**.
 - **Usages for all commands**.
     - **Specifying the input requirements in detail**.
-- **Change history**, including version, date, and changes.
+- **Change history**, including semantic versions, dates, and changes. This helps users learn the update details and also shows that the project is actively maintained.
 
 Recommended
 
@@ -55,7 +55,7 @@ Ideal
 - **Version control**
 - Configuration file
     - **Avoiding hard-coded paths/lib/packages/parameters**
-- Unit tests.
+- Unit tests. To make the tool robust.
 
 ## Version control
 
@@ -85,7 +85,8 @@ Global options/flags
 Recommended
 
 - **Supporting shell auto-completion**. This could significantly improve the usability of toolkits.
-- Checking the latest version
+- Checking the latest version.
+- Handling Ctrl+C
 
 ### Input
 
