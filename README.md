@@ -50,6 +50,7 @@ Ideal
 
 ## Source code
 
+- **Scripts should be compatible with multiple interpreters**. E.g., Python 2 and 3, and some standard libraries in Python 3.10 have compatibility problems. Snakemake's command-line flags also change a lot, e.g., in 7.x versions.
 - **Code comments**
     - **Providing essential comments for reviewers/users to understand the logic**.
     - Providing detailed comments for developers/contributors to know the details.
@@ -119,7 +120,7 @@ Basic
 
 - **Supporting both stdout and the output file**.
 - **Showing directory overwrite warning**.
-- **Writing the output file even there is no result**. This is important in workflow, where downstream tools need an input file from the upstream tool and the workflow software needs to check the execution status based on the output file.
+- **Writing the output file even if there is no result**. This is important in workflow, where downstream tools need an input file from the upstream tool and the workflow software needs to check the execution status based on the output file.
 
 Recommended
   
