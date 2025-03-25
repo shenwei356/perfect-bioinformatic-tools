@@ -46,7 +46,8 @@ Recommended
 
 Ideal
 
-- **Stories behind the development and publication**. This is inspiring for students, e.g., [C. Titus Brown shares many stories behind sourmash and his other tools](http://ivory.idyll.org/blog/).
+- **Stories behind the development and publication**. This is inspiring for students, e.g., [C. Titus Brown shares many stories behind sourmash and his other tools](http://ivory.idyll.org/blog/),
+  [Developing sylph - a look into bioinformatics tool development](https://jim-shaw-bluenote.github.io/blog/2024/developing-sylph/),
 
 ## Source code
 
@@ -120,6 +121,7 @@ Basic
 
 - **Supporting both stdout and the output file**.
 - **Showing directory overwrite warning**.
+- **Creating the output directory automatically if it does not exist**.
 - **Writing the output file even if there is no result**. This is important in workflow, where downstream tools need an input file from the upstream tool and the workflow software needs to check the execution status based on the output file.
 
 Recommended
