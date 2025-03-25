@@ -123,6 +123,7 @@ Basic
 - **Showing directory overwrite warning**.
 - **Creating the output directory automatically if it does not exist**.
 - **Writing the output file even if there is no result**. This is important in workflow, where downstream tools need an input file from the upstream tool and the workflow software needs to check the execution status based on the output file.
+    - Ideally, **opening the file handler at the beginning**, just in case the output directory does not exist or it is not writable.
 
 Recommended
   
