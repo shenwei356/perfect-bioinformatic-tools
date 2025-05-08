@@ -95,7 +95,7 @@ Recommended
 
 Basic
 
-- **Supporting input file list**. Things happen a lot when users give hundreds of input files which would exceed the argument length limit of some shells.
+- **Supporting input file list**. Things happen a lot when users give hundreds of input files, which would exceed the argument length limit of some shells.
     - **Supporting file list from stdin**. This is a good feature. e.g., `find ./ -name "*.fq.gz" | tool cmd --infile-list -`.
 - **Validating ALL option values first**. No one would like to see the process fail midway, caused by an invalid option which is parsed and used in some middle steps.
 
@@ -135,6 +135,7 @@ Recommended
 
 - **Optionally outputting in stderr and/or a file**.
 - **Showing a progress bar for a large number of files/jobs and estimating the time of arrival (ETA)**.
+- **Checking if the log file and output/input files are the same**.
 
 Log details
 
