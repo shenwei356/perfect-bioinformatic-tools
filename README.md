@@ -105,14 +105,14 @@ Recommended
     - Supporting both stdin and command-line arguments would be useful in some cases.
 - Optional supporting input directory, for tools requiring multiple input files.
 - **Optionally accepting and skipping empty files**. For example, in a workflow, some upstream tools might output an empty file because there's no result to write. Current tools should tolerate it and just exit without error.
-- **Seamless support of common compression files**. At least gzip. And compression format checking should based on the magic number, not the file extension. 
+- **Seamless support of common compression files**. At least gzip. And compression format checking should be based on the magic number, not the file extension. 
 - **Checking flag/option incompatibility and showing warnings before starting the jobs**.
 
 Ideal
 
-- **Checking file existence before performing processing**. It happens frequently when a long-time job is terminated by one unexisting input file.
-    - This checking can be cancelled for cases where the users trust all input files exist. Because checking thousands of input files would take a long time.
-- **Checking if the input file/directory and output file/directory are the same one**. If they are, the input file might be overwritten. And *the paths should be converted to absolute paths before comparison, rather than simply checking if two strings are equal*. 
+- **Checking file existence before performing processing**. It happens frequently when a long-time job is terminated by one nonexistent input file.
+    - This checking can be cancelled for cases where the users trust that all input files exist. Because checking thousands of input files would take a long time.
+- **Checking if the input file/directory and output file/directory are the same one**. If they are, the input file might be overwritten. And *the paths should be converted to absolute paths before comparison, rather than simply checking if two strings are equal*. *Symbolic links (soft links) should be taken into consideration as well*.
 - **If paired-end files are accepted as input, check that the user didn't accidentally provide the same file to both R1 and R2 arguments**. If so, inform and exit immediately.
 
 ### Output
