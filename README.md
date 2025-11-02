@@ -8,7 +8,7 @@ This page lists some personal suggestions for improving the usability of bioinfo
 
 - **Accurate**. This should be the most essential aspect, at least for simple analysis. While there may be occasional bugs, regular updates and bug fixes will make the tool more accurate and reliable over time. 
 - **Reproducible**. That means users can reproduce the same result with the same input data, the same version of the tool, and the same parameters (assuming the program is [deterministic](https://en.wikipedia.org/wiki/Deterministic_algorithm)).
-- **Installable**. Some tools run perfectly on developers' computers, while users with different platforms might struggle to install them, the failure might be due to different dependencies, hard-coded paths, et al.
+- **Installable**. Some tools run perfectly on developers' computers, while users with different platforms might struggle to install them, the failure might be due to different dependencies, hard-coded paths, etc.
 - **User-friendly**. A tool should be easy to use, with comprehensive documents and well-handled configuration/input/output.
 - **Long-time maintenance**. Bug fixes, adding new features, accuracy and usability improvement.
   [Sustained software development, not number of citations or journal choice, is indicative of accurate bioinformatic software](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02625-x).
@@ -121,7 +121,7 @@ Basic
 
 - **Supporting both stdout and the output file**.
 - **Showing directory overwrite warning**.
-- **Creating the output directory automatically if it does not exist**.
+- **Creating the output directory tree automatically if it does not exist**.
 - **Writing the output file even if there is no result**. This is important in workflow, where downstream tools need an input file from the upstream tool and the workflow software needs to check the execution status based on the output file.
     - Ideally, **opening the file handler at the beginning**, just in case the output directory does not exist or it is not writable.
 
