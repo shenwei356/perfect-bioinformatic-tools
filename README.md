@@ -20,14 +20,17 @@ Basic
 - **Specifying dependencies**.
     - Specifying the lowest version AND the highest version.
       For example, some standard libraries in Python 3.10 have compatibility problems.
-- **Providing sample/test data**. To verify the tool is successfully installed.
+- **Providing sample/test data**. To verify that the tool is successfully installed.
 
 Recommended to provide all ways:
 
 - **Supporting Conda/Pip**. IMO, this should be a mandatory requirement for ready-for-publication tools.
-    - Automatically installing all library and 3rd-party dependencies.
+    - Automatically installing all libraries and 3rd-party dependencies.
 - **Providing static-linked executable binary files** for multiple operating systems/platforms. Some tools written in C++ are difficult to compile from source, and dynamic-linked binaries often fail to run in clusters with older libraries, e.g., `version 'GLIBC_2.29' not found` is a common error.
-- **Compiling from source**. Some servers might have rare CPUs or operating systems, users have to compile from source.
+- **Compiling from source**. Some servers might have rare CPUs or operating systems; users have to compile from source.
+
+Other resources:
+- [pyOpenSci Python Package Guide](https://www.pyopensci.org/python-package-guide/index.html)
 
 ## Documentation
 
